@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AI Health Assistant</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial;
+        }
+        
+        .card {
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .btn-custom {
+            width: 100%;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="card col-md-4 bg-white">
+
+        <h2>🩺 AI Health Assistant</h2>
+
+        <form action="/predict" method="post">
+
+            <div class="mb-3">
+                <label>Fever</label>
+                <input type="number" class="form-control" name="symptom1" placeholder="0 or 1">
+            </div>
+
+            <div class="mb-3">
+                <label>Cough</label>
+                <input type="number" class="form-control" name="symptom2" placeholder="0 or 1">
+            </div>
+
+            <div class="mb-3">
+                <label>Headache</label>
+                <input type="number" class="form-control" name="symptom3" placeholder="0 or 1">
+            </div>
+
+            <button class="btn btn-primary btn-custom">Predict Disease</button>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>
